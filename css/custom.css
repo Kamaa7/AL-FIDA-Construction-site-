@@ -153,6 +153,272 @@
     min-width: 82px;
 }
 
+/* Global responsive fixes */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* Tablet and below */
+@media (max-width: 991px) {
+    .hidden-sm {
+        display: block !important;
+    }
+
+    .htc__team__wrap > [class*="col-"] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .htc__blog__wrap > [class*="col-"] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .htc__blog__wrap .blog__details h2 {
+        min-height: auto;
+    }
+
+    .slider__inner h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .slider__inner h4 {
+        font-size: 14px;
+    }
+
+    .section__title h2.title__line {
+        font-size: 28px;
+    }
+
+    .htc__contact__wrap,
+    .htc__address__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ht__address__inner,
+    .ct__address {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .footer__link {
+        text-align: center;
+    }
+
+    .footer__link .ft__menu {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .htc__team__wrap > [class*="col-"],
+    .htc__blog__wrap > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .htc__header__top .heaher__top__left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .htc__header__top .heaher__top__left li {
+        font-size: 12px;
+    }
+
+    .header__top__right {
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .slider__inner h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .slider__inner h4 {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .slider__inner p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 10px;
+    }
+
+    .slider__fixed--height {
+        height: auto;
+        min-height: 420px;
+        padding: 80px 0 60px;
+    }
+
+    .section__title h2.title__line {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .section__title p {
+        font-size: 14px;
+        line-height: 22px;
+        width: 100% !important;
+    }
+
+    .about__inner h2,
+    .team__details h2 {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    .team__details h2 a {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .team__thumb img {
+        width: 180px !important;
+        height: 220px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .htc__blog__wrap .blog__thumb a img {
+        height: 200px;
+    }
+
+    .htc__blog__wrap .blog__details {
+        padding: 16px 14px 22px;
+    }
+
+    .htc__blog__wrap .blog__details h2 {
+        font-size: 14px;
+    }
+
+    .htc__blog__wrap .blog__project__info strong {
+        min-width: auto;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .testimonial__details h2 {
+        font-size: 15px;
+    }
+
+    .testimonial__details h4 {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .testimonial__details p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .htc__testimonial__wrap .slick-dots {
+        position: relative;
+        margin-top: 25px;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+    .reguest__quote,
+    .clint__comment__form {
+        margin-top: 30px;
+    }
+
+    .htc__contact__address.add-res .htc__contact__wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .htc__contact__address.add-res .ht__address__inner {
+        margin-bottom: 20px;
+    }
+
+    .htc__contact__address.add-res .ht__address__details p {
+        font-size: 13px;
+        line-height: 20px;
+        word-break: break-word;
+    }
+
+    .footer__top .col-md-3,
+    .footer__top .col-lg-3 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer__instagram {
+        justify-content: center;
+    }
+
+    .copyright__inner p {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .htc__btn {
+        padding: 0 20px;
+        font-size: 13px;
+    }
+
+    .project__action h2 {
+        font-size: 15px;
+    }
+
+    .bradcaump-title {
+        font-size: 28px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .slider__inner h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    .login-register li a {
+        font-size: 11px;
+    }
+
+    .mainmenu__wrap .col-xs-7 {
+        width: 55%;
+    }
+
+    .mainmenu__wrap .col-xs-5 {
+        width: 45%;
+    }
+}
+
 /*--------------------------------------------------------------
   Template Name: Simply Construction HTML Template.
   Template URI: #
