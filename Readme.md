@@ -1,6 +1,6 @@
-# Amaal Fida - Fida Works Company
+# AMAL FIDA - Fida Works Company
 
-Official website for Amaal Fida (Fida Works Company), a general contracting company providing industrial support services in Saudi Arabia.
+Official website for AMAL FIDA (Fida Works Company), a general contracting company providing industrial support services in Saudi Arabia.
 
 ## Key Features
 - Responsive design for all devices
