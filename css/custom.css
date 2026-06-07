@@ -174,7 +174,111 @@ img {
 
 /* Tablet and below */
 @media (max-width: 991px) {
-    .hidden-sm {
+    /* Keep desktop nav hidden on mobile/tablet */
+    .main__menu__nav.hidden-xs.hidden-sm,
+    .main__menu__nav {
+        display: none !important;
+    }
+
+    .htc__header__search {
+        display: none !important;
+    }
+
+    /* Mobile header layout */
+    .mainmenu__wrap .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mainmenu__wrap .col-xs-7,
+    .mainmenu__wrap .col-sm-6:first-child {
+        width: auto;
+        flex: 0 0 auto;
+        padding-left: 15px;
+        padding-right: 0;
+    }
+
+    .mainmenu__wrap .col-xs-5,
+    .mainmenu__wrap .col-sm-6:last-child {
+        flex: 1;
+        width: auto;
+        padding-right: 15px;
+        padding-left: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 60px;
+        position: relative;
+    }
+
+    .mainmenu__wrap .logo {
+        height: auto;
+        line-height: normal;
+        padding: 8px 0;
+    }
+
+    .mainmenu__wrap .logo img {
+        max-height: 50px;
+        width: 50px;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        position: relative;
+    }
+
+    .mobile-menu > nav {
+        display: none;
+    }
+
+    .mobile-menu-area {
+        width: 100%;
+        clear: both;
+        position: relative;
+        z-index: 999;
+    }
+
+    .mean-container .mean-bar {
+        float: none;
+        width: auto;
+        min-height: auto;
+        padding: 0;
+        position: static;
+    }
+
+    .mean-container a.meanmenu-reveal {
+        position: relative !important;
+        top: auto !important;
+        right: 0 !important;
+        margin-top: 0 !important;
+        display: inline-block !important;
+        border-color: #1f2d30;
+    }
+
+    .mean-container a.meanmenu-reveal span {
+        background: #1f2d30;
+    }
+
+    .mean-container .mean-nav {
+        margin-top: 12px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .sticky__header.scroll-header .mean-container a.meanmenu-reveal {
+        margin-top: 0 !important;
+    }
+
+    /* Show content sections hidden on tablet only */
+    .htc__offer__area .hidden-sm,
+    .htc__about__area .hidden-sm,
+    .htc__latest__project__area .hidden-sm,
+    .htc__service__area .hidden-sm {
         display: block !important;
     }
 
@@ -237,20 +341,55 @@ img {
         max-width: 100%;
     }
 
+    .htc__header__top .container .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .htc__header__top .col-xs-12 {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .htc__header__top .heaher__top__left {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .htc__header__top .heaher__top__left li {
-        font-size: 12px;
+        font-size: 11px;
+        margin: 2px 6px;
+    }
+
+    .htc__header__top .heaher__top__left li + li {
+        margin-left: 6px;
     }
 
     .header__top__right {
         justify-content: center;
-        margin-top: 5px;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .login-register {
+        margin-right: 0;
+    }
+
+    .mainmenu__wrap {
+        padding: 5px 0;
+    }
+
+    .mainmenu__wrap .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .slider__inner h1 {
@@ -398,24 +537,21 @@ img {
 /* Small mobile */
 @media (max-width: 480px) {
     .slider__inner h1 {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 22px;
+        line-height: 30px;
     }
 
-    .logo img {
-        max-height: 50px;
+    .mainmenu__wrap .logo img {
+        max-height: 44px;
+        width: 44px;
     }
 
     .login-register li a {
         font-size: 11px;
     }
 
-    .mainmenu__wrap .col-xs-7 {
-        width: 55%;
-    }
-
-    .mainmenu__wrap .col-xs-5 {
-        width: 45%;
+    .htc__header__top .heaher__top__left li {
+        font-size: 10px;
     }
 }
 
