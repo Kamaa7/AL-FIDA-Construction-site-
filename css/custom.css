@@ -202,10 +202,14 @@ img {
         min-height: 70px;
         margin-left: 0;
         margin-right: 0;
-        position: relative;
     }
 
-    /* Logo column - far left */
+    .mainmenu__wrap .row::before,
+    .mainmenu__wrap .row::after {
+        display: none;
+    }
+
+    /* Logo - pinned left */
     .mainmenu__wrap .col-xs-7,
     .mainmenu__wrap .col-sm-6:first-child {
         width: auto !important;
@@ -216,6 +220,8 @@ img {
         margin: 0;
         text-align: left;
         order: 1;
+        position: relative;
+        z-index: 2;
     }
 
     .mainmenu__wrap .logo {
@@ -238,66 +244,62 @@ img {
         display: block;
     }
 
-    /* Hide middle nav column - menu handled by meanmenu */
+    /* Hamburger column - pinned right */
     .mainmenu__wrap .col-xs-5,
     .mainmenu__wrap .col-md-8.col-sm-6.col-xs-5 {
-        position: absolute !important;
-        width: 1px !important;
-        height: 1px !important;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
+        width: auto !important;
+        max-width: none;
+        flex: 0 0 auto;
+        float: none !important;
         padding: 0;
-        margin: 0;
-        border: 0;
+        margin: 0 0 0 auto;
         order: 2;
+        position: static !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: visible !important;
+        clip: auto !important;
+        height: auto !important;
     }
 
-    .mobile-menu > nav {
-        display: block;
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
+    .mobile-menu {
+        display: none !important;
     }
 
-    /* Hamburger container - full width bar, icon aligned right */
     .mobile-menu-area {
-        position: absolute !important;
-        top: 0;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        height: 70px;
+        position: static !important;
+        width: auto !important;
+        height: auto;
         display: block !important;
         clear: none !important;
-        z-index: 1001;
         margin: 0;
         padding: 0;
-        pointer-events: none;
+        z-index: 3;
     }
 
     .mean-container {
-        width: 100% !important;
-        height: 70px;
-        position: relative;
+        width: auto !important;
+        position: static;
     }
 
     .mean-container .mean-bar {
         float: none !important;
-        width: 100% !important;
+        width: auto !important;
         min-height: auto;
         padding: 0;
-        position: relative;
-        height: 70px;
-        pointer-events: none;
+        position: static;
+        background: transparent;
     }
 
-    .mean-container a.meanmenu-reveal {
-        position: absolute !important;
-        top: 50% !important;
-        right: 0 !important;
+    .mean-container a.meanmenu-reveal,
+    .sticky__header.scroll-header .mean-container a.meanmenu-reveal {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
         left: auto !important;
-        transform: translateY(-50%);
         margin: 0 !important;
+        transform: none;
         display: inline-block !important;
         border: 2px solid #1f2d30;
         border-radius: 4px;
@@ -305,7 +307,6 @@ img {
         width: 28px;
         height: 22px;
         line-height: 22px;
-        pointer-events: auto;
     }
 
     .mean-container a.meanmenu-reveal span {
@@ -318,21 +319,16 @@ img {
         margin-top: 0;
     }
 
-    /* Dropdown menu full width below header */
-    .mean-container .mean-nav {
+    /* Dropdown spans full header width */
+    .mainmenu__wrap .mean-container .mean-nav {
         position: absolute;
         top: 70px;
-        left: 0;
-        right: 0;
+        left: 0 !important;
+        right: 0 !important;
         width: 100% !important;
-        margin-top: 0;
+        margin-top: 0 !important;
         z-index: 9999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        pointer-events: auto;
-    }
-
-    .sticky__header.scroll-header .mean-container a.meanmenu-reveal {
-        margin-top: 0 !important;
     }
 
     .sticky__header.scroll-header .mainmenu__wrap {
