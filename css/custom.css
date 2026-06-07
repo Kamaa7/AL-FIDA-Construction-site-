@@ -172,9 +172,8 @@ img {
     width: auto;
 }
 
-/* Tablet and below */
+/* Tablet and below - logo left, hamburger right */
 @media (max-width: 991px) {
-    /* Keep desktop nav hidden on mobile/tablet */
     .main__menu__nav.hidden-xs.hidden-sm,
     .main__menu__nav {
         display: none !important;
@@ -184,94 +183,160 @@ img {
         display: none !important;
     }
 
-    /* Mobile header layout */
+    .mainmenu__wrap {
+        position: relative;
+        min-height: 70px;
+    }
+
+    .mainmenu__wrap > .container {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .mainmenu__wrap .row {
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 70px;
         margin-left: 0;
         margin-right: 0;
+        position: relative;
     }
 
+    /* Logo column - far left */
     .mainmenu__wrap .col-xs-7,
     .mainmenu__wrap .col-sm-6:first-child {
-        width: auto;
+        width: auto !important;
+        max-width: none;
         flex: 0 0 auto;
-        padding-left: 15px;
-        padding-right: 0;
-    }
-
-    .mainmenu__wrap .col-xs-5,
-    .mainmenu__wrap .col-sm-6:last-child {
-        flex: 1;
-        width: auto;
-        padding-right: 15px;
-        padding-left: 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        min-height: 60px;
-        position: relative;
+        float: none !important;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        order: 1;
     }
 
     .mainmenu__wrap .logo {
-        height: auto;
-        line-height: normal;
-        padding: 8px 0;
+        height: auto !important;
+        line-height: normal !important;
+        text-align: left !important;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .mainmenu__wrap .logo a {
+        display: inline-block;
+        line-height: 0;
     }
 
     .mainmenu__wrap .logo img {
-        max-height: 50px;
-        width: 50px;
+        max-height: 52px;
+        width: 52px;
+        height: auto;
+        display: block;
     }
 
-    .mobile-menu {
-        width: 100%;
-        position: relative;
+    /* Hide middle nav column - menu handled by meanmenu */
+    .mainmenu__wrap .col-xs-5,
+    .mainmenu__wrap .col-md-8.col-sm-6.col-xs-5 {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        padding: 0;
+        margin: 0;
+        border: 0;
+        order: 2;
     }
 
     .mobile-menu > nav {
-        display: none;
+        display: block;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
     }
 
+    /* Hamburger container - full width bar, icon aligned right */
     .mobile-menu-area {
-        width: 100%;
-        clear: both;
+        position: absolute !important;
+        top: 0;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 70px;
+        display: block !important;
+        clear: none !important;
+        z-index: 1001;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+    }
+
+    .mean-container {
+        width: 100% !important;
+        height: 70px;
         position: relative;
-        z-index: 999;
     }
 
     .mean-container .mean-bar {
-        float: none;
-        width: auto;
+        float: none !important;
+        width: 100% !important;
         min-height: auto;
         padding: 0;
-        position: static;
+        position: relative;
+        height: 70px;
+        pointer-events: none;
     }
 
     .mean-container a.meanmenu-reveal {
-        position: relative !important;
-        top: auto !important;
+        position: absolute !important;
+        top: 50% !important;
         right: 0 !important;
-        margin-top: 0 !important;
+        left: auto !important;
+        transform: translateY(-50%);
+        margin: 0 !important;
         display: inline-block !important;
-        border-color: #1f2d30;
+        border: 2px solid #1f2d30;
+        border-radius: 4px;
+        padding: 8px 10px;
+        width: 28px;
+        height: 22px;
+        line-height: 22px;
+        pointer-events: auto;
     }
 
     .mean-container a.meanmenu-reveal span {
         background: #1f2d30;
+        height: 3px;
+        margin-top: 4px;
     }
 
+    .mean-container a.meanmenu-reveal span:first-child {
+        margin-top: 0;
+    }
+
+    /* Dropdown menu full width below header */
     .mean-container .mean-nav {
-        margin-top: 12px;
         position: absolute;
+        top: 70px;
         left: 0;
         right: 0;
+        width: 100% !important;
+        margin-top: 0;
         z-index: 9999;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        pointer-events: auto;
     }
 
     .sticky__header.scroll-header .mean-container a.meanmenu-reveal {
         margin-top: 0 !important;
+    }
+
+    .sticky__header.scroll-header .mainmenu__wrap {
+        min-height: 70px;
     }
 
     /* Show content sections hidden on tablet only */
